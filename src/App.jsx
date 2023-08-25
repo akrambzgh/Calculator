@@ -1,5 +1,5 @@
 import "./scss/App.scss";
-import ThemeSwitcher from "./components/themeSwitcher";
+import ThemeSwitcher from "./components/ThemeSwitcher";
 import Calculator from "./components/Calculator";
 import { useState, useRef } from "react";
 import buttons from "./buttons";
