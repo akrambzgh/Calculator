@@ -42,6 +42,18 @@ git clone https://github.com/akrambzgh/Calculator.git
 
 Contributions are welcome! If you find any issues or want to improve the calculator, feel free to open a pull request.
 
+## Contact
+
+If you have any questions or need assistance, feel free to contact the project owner:
+
+- Name: Akram Bouzoualegh
+- GitHub: akrambzgh
+- Email: akrambzgh04@gmail.com
+
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
+
+---
+
+### Thank you for using the My Calculator! Enjoy mathematician! 📚🔍
