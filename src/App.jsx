@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import "./scss/App.scss";
+import ThemeSwitcher from "./components/themeSwitcher";
+import Calculator from "./components/Calculator";
+import { useState, useRef } from "react";
+import buttons from "./buttons";
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [theme, setTheme] = useState("theme-1");
+  const switcherRef = useRef(null);
+
+  const switchTheme = () => {
+    const switcher = switcherRef.current;
+    if (switcher.classList.contains("theme-1")) {
+      switcher.classList.add("theme-2");
+      switcher.classList.remove("theme-1");
+      setTheme("theme-2");
+    } else if (switcher.classList.contains("theme-2")) {
+      switcher.classList.add("theme-3");
+      switcher.classList.remove("theme-2");
+      setTheme("theme-3");
+    } else if (switcher.classList.contains("theme-3")) {
+      switcher.classList.add("theme-1");
+      switcher.classList.remove("theme-3");
+      setTheme("theme-1");
+    }
+  };
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <div
+      className={`App ${
+        theme === "theme-1"
+          ? "original"
+          : theme === "theme-2"
+          ? "second"
+          : "third"
+      }`}
+    >
+      <ThemeSwitcher
+        switcherRef={switcherRef}
+        switchTheme={switchTheme}
+        theme={theme}
+      />
+      <Calculator buttons={buttons} />
+    </div>
+  );
 }
 
-export default App
+export default App;

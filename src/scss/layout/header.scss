@@ -1,0 +1,62 @@
+@use "../vars.scss" as *;
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  width: 90%;
+  margin-inline: auto;
+  .logo {
+    h2 {
+      font-size: 35px;
+      font-weight: 500;
+    }
+  }
+  .themes {
+    width: 114px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    span {
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 11px;
+      margin-left: 10px;
+    }
+    .switcher {
+      width: 100px;
+      height: 30px;
+      border-radius: 30px;
+      position: relative;
+      cursor: pointer;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 5px;
+        transform: translateY(-50%);
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        transition: $transition;
+      }
+      &.theme-1 {
+        &::before {
+          transform: translate(0, -50%);
+        }
+      }
+      &.theme-2 {
+        &::before {
+          transform: translate(35px, -50%);
+        }
+      }
+      &.theme-3 {
+        &::before {
+          transform: translate(70px, -50%);
+        }
+      }
+    }
+  }
+}

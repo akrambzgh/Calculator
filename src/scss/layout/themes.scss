@@ -1,0 +1,174 @@
+@use "../vars.scss" as *;
+
+.App {
+  &.original {
+    background-color: map-get(
+      $map: $themeOne,
+      $key: "VeryDarkDesaturatedBlueBack"
+    );
+    .logo {
+      h2 {
+        color: $White;
+      }
+    }
+    .themes {
+      span {
+        color: $White;
+      }
+      .switcher {
+        background-color: map-get(
+          $map: $themeOne,
+          $key: "VeryDarkDesaturatedBlueToggle"
+        );
+        &::before {
+          background-color: map-get($map: $themeOne, $key: "DarkRed");
+        }
+      }
+    }
+    .main {
+      .screen {
+        background-color: map-get(
+          $map: $themeOne,
+          $key: "VeryDarkDesaturatedBlueScreen"
+        );
+        color: $White;
+      }
+      .functions {
+        background-color: map-get(
+          $map: $themeOne,
+          $key: "VeryDarkDesaturatedBlueToggle"
+        );
+      }
+      .button {
+        background-color: map-get($map: $themeOne, $key: "LightGrayishOrange");
+        color: map-get($map: $themeOne, $key: "VeryDarkGrayishBlue");
+        box-shadow: 0 5px map-get($map: $themeOne, $key: "GrayishOrange");
+      }
+      .del {
+        background-color: map-get(
+          $map: $themeOne,
+          $key: "DesaturatedDarkBlueBack"
+        );
+        box-shadow: 0 5px
+          map-get($map: $themeOne, $key: "DesaturatedDarkBlueShadow");
+      }
+      .reset {
+        background-color: map-get(
+          $map: $themeOne,
+          $key: "DesaturatedDarkBlueBack"
+        );
+        box-shadow: 0 5px
+          map-get($map: $themeOne, $key: "DesaturatedDarkBlueShadow");
+      }
+      .equals {
+        background-color: map-get($map: $themeOne, $key: "Red");
+        box-shadow: 0 5px map-get($map: $themeOne, $key: "DarkRed");
+      }
+      .del,
+      .reset,
+      .equals {
+        color: $White;
+      }
+    }
+  }
+  &.second {
+    background-color: map-get($map: $themeTwo, $key: "LightGray");
+    .logo {
+      h2 {
+        color: map-get($map: $themeTwo, $key: "VeryDarkGrayishYellow");
+      }
+    }
+    .themes {
+      span {
+        color: map-get($map: $themeTwo, $key: "VeryDarkGrayishYellow");
+      }
+      .switcher {
+        background-color: map-get($map: $themeTwo, $key: "GrayishGed");
+        &::before {
+          background-color: map-get($map: $themeTwo, $key: "DarkOrange");
+        }
+      }
+    }
+    .main {
+      .screen {
+        background-color: map-get($map: $themeTwo, $key: "VeryLightGray");
+        color: map-get($map: $themeTwo, $key: "VeryDarkGrayishYellow");
+      }
+      .functions {
+        background-color: map-get($map: $themeTwo, $key: "GrayishGed");
+      }
+      .button {
+        background-color: map-get($map: $themeTwo, $key: "LightGrayishYellow");
+        color: map-get($map: $themeTwo, $key: "VeryDarkGrayishYellow");
+        box-shadow: 0 5px map-get($map: $themeTwo, $key: "DarkGrayishOrange");
+      }
+      .del {
+        background-color: map-get($map: $themeTwo, $key: "DarkModerateCyan");
+        box-shadow: 0 5px map-get($map: $themeTwo, $key: "VeryDarkCyan");
+      }
+      .reset {
+        background-color: map-get($map: $themeTwo, $key: "DarkModerateCyan");
+        box-shadow: 0 5px map-get($map: $themeTwo, $key: "VeryDarkCyan");
+      }
+      .equals {
+        background-color: map-get($map: $themeTwo, $key: "Orange");
+        box-shadow: 0 5px map-get($map: $themeTwo, $key: "DarkOrange");
+      }
+      .del,
+      .reset,
+      .equals {
+        color: $White;
+      }
+    }
+  }
+  &.third {
+    background-color: map-get($map: $themeThree, $key: "VeryDarkVioletBack");
+    .logo {
+      h2 {
+        color: map-get($map: $themeThree, $key: "LightYellow");
+      }
+    }
+    .themes {
+      span {
+        color: map-get($map: $themeThree, $key: "LightYellow");
+      }
+      .switcher {
+        background-color: map-get($map: $themeThree, $key: "VeryDarkVioletSec");
+        &::before {
+          background-color: map-get($map: $themeThree, $key: "SoftCyan");
+        }
+      }
+    }
+    .main {
+      .screen {
+        background-color: map-get($map: $themeThree, $key: "VeryDarkVioletSec");
+        color: map-get($map: $themeThree, $key: "LightYellow");
+      }
+      .functions {
+        background-color: map-get($map: $themeThree, $key: "VeryDarkVioletSec");
+      }
+      .button {
+        background-color: map-get($map: $themeThree, $key: "VeryDarkViolet");
+        color: map-get($map: $themeThree, $key: "LightYellow");
+        box-shadow: 0 5px map-get($map: $themeThree, $key: "DarkMagenta");
+      }
+      .del {
+        background-color: map-get($map: $themeThree, $key: "DarkViolet");
+        box-shadow: 0 5px map-get($map: $themeThree, $key: "VividMagenta");
+      }
+      .reset {
+        background-color: map-get($map: $themeThree, $key: "DarkViolet");
+        box-shadow: 0 5px map-get($map: $themeThree, $key: "VividMagenta");
+      }
+      .equals {
+        background-color: map-get($map: $themeThree, $key: "PureCyan");
+        color: map-get($map: $themeThree, $key: "VeryDarkBlue");
+        box-shadow: 0 5px map-get($map: $themeThree, $key: "SoftCyan");
+      }
+      .del,
+      .reset {
+        color: $White;
+      }
+    }
+  }
+}
