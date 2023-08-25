@@ -10,7 +10,7 @@ This is a simple calculator application built using HTML, CSS, and JavaScript.
 
 ## Demo
 
-You can try out the calculator [here](https://akrambzgh.github.io/Calculator/).
+You can try out the calculator [here](https://my-calculator-w-app.netlify.app/).
 
 ## Installation
 
